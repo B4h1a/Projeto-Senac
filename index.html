@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Conquiste seu Primeiro Emprego</title>
+
+    <link rel="icon" type="image/png" href="assets/logo.png">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="background"></div>
+
+    <!-- ===================================== -->
+    <!-- MENU -->
+    <!-- ===================================== -->
+
+    <section id="menu" class="screen active">
+
+        <div class="menu-card">
+
+            <img src="assets/logo.png" class="logo">
+
+            <h1>Conquiste seu Primeiro Emprego</h1>
+
+            <p>
+
+                Cada decisão muda seu futuro profissional.
+
+            </p>
+
+            <input type="text" id="playerName" placeholder="Digite seu nome">
+
+            <button id="startButton">
+                Começar
+            </button>
+
+            <button id="creditsButton">
+                Créditos
+            </button>
+
+
+
+
+
+        </div>
+
+
+    </section>
+
+    <!-- ===================================== -->
+    <!-- HISTÓRIA -->
+    <!-- ===================================== -->
+
+    <section id="intro" class="screen">
+
+        <div class="story-card">
+
+            <h2>
+
+                Sua Jornada Começa
+
+            </h2>
+
+            <p>
+
+                Você acabou de concluir seus estudos.
+
+                Agora chegou o momento de enfrentar o mercado de trabalho.
+
+                Ao longo desta jornada você precisará decidir entre estudar, fazer cursos, participar de eventos,
+                construir networking, preparar seu currículo e enfrentar entrevistas.
+
+                Cada escolha altera seu futuro.
+
+                Boa sorte!
+
+            </p>
+
+            <button id="introButton">
+
+                Iniciar Jornada
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- ===================================== -->
+    <!-- JOGO -->
+    <!-- ===================================== -->
+
+    <section id="game" class="screen">
+
+        <header>
+
+            <div>
+
+                <h2 id="phaseTitle">
+
+                    FASE
+
+                </h2>
+
+                <p id="phaseProgress">
+
+                    Fase 1 de 10
+
+                </p>
+
+            </div>
+
+            <div class="player">
+
+                <span id="playerLabel">
+
+                    Jogador
+
+                </span>
+
+            </div>
+
+        </header>
+        <div class="progress-container">
+
+            <div class="progress-fill" id="progressFill">
+            </div>
+
+        </div>
+        <div class="dois-um">
+            <div class="game-card">
+
+                <img id="phaseImage" src="assets/cert.jpg">
+
+                <h2 id="question">
+
+                    Pergunta
+
+                </h2>
+
+                <p id="description">
+
+                    Descrição
+
+                </p>
+
+                <div class="choices">
+
+                    <button id="choice1">
+                        Escolha 1
+                    </button>
+
+                    <button id="choice2">
+                        Escolha 2
+                    </button>
+
+                    <button id="choice3">
+                        Escolha 3
+                    </button>
+
+                </div>
+
+            </div>
+            <div class="bars">
+
+                <div>
+
+                    <label>
+
+                        Experiência
+
+                    </label>
+
+                    <progress id="expBar" max="200" value="0"></progress>
+
+                </div>
+
+                <div>
+
+                    <label>
+
+                        Qualificação
+
+                    </label>
+
+                    <progress id="qualBar" max="200" value="0"></progress>
+
+                </div>
+
+                <div>
+
+                    <label>
+
+                        Habilidades
+
+                    </label>
+
+                    <progress id="habBar" max="200" value="0"></progress>
+
+                </div>
+
+                <div>
+
+                    <label>
+
+                        Networking
+
+                    </label>
+
+                    <progress id="netBar" max="200" value="0"></progress>
+
+                </div>
+
+                <div>
+
+                    <label>
+
+                        Empregabilidade
+
+                    </label>
+
+                    <progress id="empBar" max="200" value="0"></progress>
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </section>
+
+    <!-- ===================================== -->
+    <!-- FINAL -->
+    <!-- ===================================== -->
+
+    <section id="final" class="screen">
+
+        <div class="final-card">
+
+            <img src="assets/trof.png" class="trophy">
+
+            <h1>
+
+                Parabéns
+
+            </h1>
+
+            <h2 id="finalName">
+
+                Jogador
+
+            </h2>
+
+            <p id="finalText">
+
+                Resultado
+
+            </p>
+
+            <div id="stars"></div>
+
+
+            <div class="result-card">
+
+                <h3>📊 Estatísticas</h3>
+
+                <div class="stats-grid">
+
+                    <div>
+                        <span>Experiência</span>
+                        <strong id="statExp">0</strong>
+                    </div>
+
+                    <div>
+                        <span>Qualificação</span>
+                        <strong id="statQual">0</strong>
+                    </div>
+
+                    <div>
+                        <span>Habilidades</span>
+                        <strong id="statHab">0</strong>
+                    </div>
+
+                    <div>
+                        <span>Networking</span>
+                        <strong id="statNet">0</strong>
+                    </div>
+
+                    <div>
+                        <span>Empregabilidade</span>
+                        <strong id="statEmp">0</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="result-card">
+
+                <h3>🏆 Conquistas</h3>
+
+                <ul id="achievementList">
+
+                </ul>
+
+            </div>
+            <div class="buttons">
+
+                <button id="share">
+                    Compartilhar Site!
+                </button>
+
+                <button id="restart">
+                    Começar Novamente
+                </button>
+
+            </div>
+
+
+            <div class="certificate-signatures">
+
+                <div>
+
+                    <hr>
+
+                    <span>Projeto SENAC</span>
+
+                </div>
+
+                <div>
+
+                    <hr>
+
+                    <span>Conquiste seu Primeiro Emprego</span>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ===================================== -->
+    <!-- CRÉDITOS -->
+    <!-- ===================================== -->
+
+    <section id="creditsScreen" class="screen">
+
+        <div class="story-card credits-card">
+
+            <h2>Créditos</h2>
+
+            <p>Projeto desenvolvido para o SENAC</p>
+
+            <div class="team">
+
+                <h3>Desenvolvedores</h3>
+
+                <ul>
+                    <li>Victor Hugo Bahia Cardoso dos Santos</li>
+                    <li>Carlos Roberto Ferreira Junior</li>
+                    <li>Eduardo de Souza Soares</li>
+                    <li>Vitor Hugo Pereira Teixeira</li>
+                </ul>
+
+            </div>
+
+            <p class="version">
+                Conquiste seu Primeiro Emprego
+            </p>
+
+            <button id="closeCredits">
+                ⬅ Voltar
+            </button>
+
+        </div>
+
+    </section>
+    <section id="certificateScreen" class="screen">
+
+        <div class="final-card">
+
+            <h1>🏅 Certificado</h1>
+
+            <h2>Conquiste seu Primeiro Emprego</h2>
+
+            <p>Certificamos que</p>
+
+            <h2 id="certificateName">Nome do Jogador</h2>
+
+            <p>concluiu com sucesso a jornada educativa e conquistou a carreira de</p>
+
+            <h2 id="certificateCareer">Carreira</h2>
+
+            <p id="certificateDate"></p>
+
+
+
+        </div>
+        <div class="certificate-buttons">
+
+            <button id="backResult">
+
+                ⬅ Voltar ao Resultado
+
+            </button>
+
+            <button id="backMenu">
+
+                Menu Inicial
+
+            </button>
+
+        </div>
+
+
+    </section>
+
+
+    <script src="script.js"></script>
+    <div id="toast"></div>
+</body>
+
+</html>
