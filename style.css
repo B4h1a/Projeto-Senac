@@ -3,43 +3,43 @@
    Projeto SENAC
 ======================================= */
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-:root{
+:root {
 
-    --bg:#0f172a;
-    --card:#1e293b;
-    --card2:#334155;
+    --bg: #0f172a;
+    --card: #1e293b;
+    --card2: #334155;
 
-    --verde:#22c55e;
-    --azul:#3b82f6;
-    --amarelo:#facc15;
-    --vermelho:#ef4444;
+    --verde: #22c55e;
+    --azul: #3b82f6;
+    --amarelo: #facc15;
+    --vermelho: #ef4444;
 
-    --texto:#ffffff;
-    --cinza:#cbd5e1;
-
-}
-
-html{
-
-    scroll-behavior:smooth;
+    --texto: #ffffff;
+    --cinza: #cbd5e1;
 
 }
 
-body{
+html {
 
-    font-family:"Poppins",sans-serif;
+    scroll-behavior: smooth;
 
-    background:var(--bg);
+}
 
-    color:white;
+body {
 
-    overflow-x:hidden;
+    font-family: "Poppins", sans-serif;
+
+    background: var(--bg);
+
+    color: white;
+
+    overflow: hidden;
 
 }
 
@@ -68,7 +68,7 @@ body{
 
     font-weight: 500;
 
-    box-shadow: 0 8px 25px rgba(0,0,0,.35);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .35);
 
     display: none;
 
@@ -79,35 +79,36 @@ body{
     transition: opacity .3s ease;
 
 }
-.background{
 
-    position:fixed;
+.background {
 
-    inset:0;
+    position: fixed;
+
+    inset: 0;
 
     background:
 
-    linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75));
+        linear-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75));
 
-    background-size:cover;
+    background-size: cover;
 
-    background-position:center;
+    background-position: center;
 
-    z-index:-1;
+    z-index: -1;
 
 }
 
 /* Camada com efeito */
 
-.background::after{
+.background::after {
 
-    content:"";
+    content: "";
 
-    position:absolute;
+    position: absolute;
 
-    inset:0;
+    inset: 0;
 
-    backdrop-filter:blur(3px);
+    backdrop-filter: blur(3px);
 
 }
 
@@ -115,63 +116,68 @@ body{
 TELAS
 ========================== */
 
-.screen{
+.screen {
 
-    display:none;
+    display: none;
 
-    width:100%;
+    width: 100%;
 
-    min-height:100vh;
+    min-height: 100vh;
 
-    padding:50px;
+    height: 100vh;
 
-    justify-content:center;
+    padding: 50px;
 
-    align-items:center;
-        position:relative;
-    z-index:1;
+    justify-content: center;
 
-}
+    align-items: center;
 
-.screen.active{
+    position: relative;
 
-    display:flex;
+    z-index: 1;
 
-    animation:fade .6s;
-
-    gap:30px
+    overflow-y: auto;
 
 }
 
-#certificateScreen.active{
+.screen.active {
 
-    display:flex;
+    display: flex;
 
-    flex-direction:column;
+    animation: fade .6s;
 
-    justify-content:center;
+    gap: 30px
+}
 
-    align-items:center;
+#certificateScreen.active {
 
-    gap:25px;
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 25px;
 
 }
 
-@keyframes fade{
+@keyframes fade {
 
-    from{
+    from {
 
-        opacity:0;
+        opacity: 0;
 
-        transform:translateY(20px);
+        transform: translateY(20px);
 
     }
 
-    to{
+    to {
 
-        opacity:1;
+        opacity: 1;
 
-        transform:translateY(0);
+        transform: translateY(0);
 
     }
 
@@ -184,196 +190,198 @@ CARDS
 
 .story-card,
 
-.game-card{
+.game-card {
 
-    width:min(900px,);
+    width: min(900px, );
 
-    background:rgba(30,41,59,.72);
+    background: rgba(30, 41, 59, .72);
 
-    backdrop-filter:blur(14px);
+    backdrop-filter: blur(14px);
 
-    border:1px solid rgba(255,255,255,.1);
+    border: 1px solid rgba(255, 255, 255, .1);
 
-    border-radius:25px;
+    border-radius: 25px;
 
-    padding:40px;
+    padding: 40px;
 
-    text-align:center;
+    text-align: center;
 
     box-shadow:
 
-    0 10px 40px rgba(0,0,0,.45);
+        0 10px 40px rgba(0, 0, 0, .45);
 
 }
+
 /* =======================================
    CERTIFICADO
 ======================================= */
 
-.final-card{
+.final-card {
 
-    width:100%;
+    width: 100%;
 
 
-    background:rgba(30, 41, 59, .72);
+    background: rgba(30, 41, 59, .72);
 
     color: white;
 
 
-    border-radius:25px;
+    border-radius: 25px;
 
-    padding:60px;
+    padding: 60px;
 
-    text-align:center;
+    text-align: center;
 
-    position:relative;
+    position: relative;
 
-    overflow:hidden;
+    overflow: hidden;
 
     box-shadow:
-    0 20px 60px rgba(0,0,0,.35);
+        0 20px 60px rgba(0, 0, 0, .35);
 
 }
 
 /* Moldura interna */
 
-.final-card::before{
+.final-card::before {
 
-    content:"";
+    content: "";
 
-    position:absolute;
+    position: absolute;
 
-    top:18px;
-    left:18px;
-    right:18px;
-    bottom:18px;
+    top: 18px;
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
 
-    border:2px solid #005CA9;
+    border: 2px solid #005CA9;
 
-    border-radius:15px;
+    border-radius: 15px;
 
-    pointer-events:none;
+    pointer-events: none;
 
 }
 
 /* Faixa superior */
 
-.final-card::after{
+.final-card::after {
 
-    content:"";
+    content: "";
 
-    position:absolute;
+    position: absolute;
 
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
 
-    width:100%;
-    height:12px;
+    width: 100%;
+    height: 12px;
 
-
-}
-
-.final-card h1{
-
-    font-size:50px;
-
-    color:#005CA9;
-
-    margin-bottom:10px;
 
 }
 
-.final-card h2{
+.final-card h1 {
 
-    font-size:34px;
+    font-size: 50px;
 
-    color:#F7941D;
+    color: #005CA9;
 
-    margin:20px 0;
-
-}
-
-.final-card p{
-
-    font-size:20px;
-
-    color:#334155;
-
-    line-height:1.8;
+    margin-bottom: 10px;
 
 }
 
-#certificateName{
+.final-card h2 {
 
-    font-size:42px;
+    font-size: 34px;
 
-    color:#005CA9;
+    color: #F7941D;
 
-    font-weight:bold;
-
-    margin:25px 0;
-
-    text-transform:uppercase;
+    margin: 20px 0;
 
 }
 
-#certificateCareer{
+.final-card p {
 
-    font-size:36px;
+    font-size: 20px;
 
-    color:#F7941D;
+    color: #334155;
 
-    font-weight:bold;
-
-    margin:20px 0;
+    line-height: 1.8;
 
 }
 
-#certificateDate{
+#certificateName {
 
-    margin-top:50px;
+    font-size: 42px;
 
-    font-size:18px;
+    color: #005CA9;
 
-    color:#64748b;
+    font-weight: bold;
 
-    font-style:italic;
+    margin: 25px 0;
 
-}
-.certificate-signatures{
-
-    margin-top:70px;
-
-    display:flex;
-
-    justify-content:space-around;
-
-    gap:40px;
+    text-transform: uppercase;
 
 }
 
-.certificate-signatures div{
+#certificateCareer {
 
-    width:250px;
+    font-size: 36px;
 
-    text-align:center;
+    color: #F7941D;
 
-}
+    font-weight: bold;
 
-.certificate-signatures hr{
-
-    border:none;
-
-    border-top:2px solid #94a3b8;
-
-    margin-bottom:10px;
+    margin: 20px 0;
 
 }
 
-.certificate-signatures span{
+#certificateDate {
 
-    color:white;
+    margin-top: 50px;
 
-    font-size:15px;
+    font-size: 18px;
+
+    color: #64748b;
+
+    font-style: italic;
+
+}
+
+.certificate-signatures {
+
+    margin-top: 70px;
+
+    display: flex;
+
+    justify-content: space-around;
+
+    gap: 40px;
+
+}
+
+.certificate-signatures div {
+
+    width: 250px;
+
+    text-align: center;
+
+}
+
+.certificate-signatures hr {
+
+    border: none;
+
+    border-top: 2px solid #94a3b8;
+
+    margin-bottom: 10px;
+
+}
+
+.certificate-signatures span {
+
+    color: white;
+
+    font-size: 15px;
 
 }
 
@@ -381,29 +389,29 @@ CARDS
 LOGO
 ========================== */
 
-.logo{
+.logo {
 
-    width:320px;
+    width: 320px;
 
-    margin-bottom:20px;
-
-}
-
-.menu-card h1{
-
-    font-size:42px;
-
-    margin-bottom:15px;
+    margin-bottom: 20px;
 
 }
 
-.menu-card p{
+.menu-card h1 {
 
-    color:var(--cinza);
+    font-size: 42px;
 
-    margin-bottom:30px;
+    margin-bottom: 15px;
 
-    font-size:18px;
+}
+
+.menu-card p {
+
+    color: var(--cinza);
+
+    margin-bottom: 30px;
+
+    font-size: 18px;
 
 }
 
@@ -411,25 +419,25 @@ LOGO
 INPUT
 ========================== */
 
-input{
+input {
 
-    width:100%;
+    width: 100%;
 
-    max-width:450px;
+    max-width: 450px;
 
-    padding:18px;
+    padding: 18px;
 
-    border:none;
+    border: none;
 
-    outline:none;
+    outline: none;
 
-    border-radius:12px;
+    border-radius: 12px;
 
-    font-size:18px;
+    font-size: 18px;
 
-    margin-top:15px;
+    margin-top: 15px;
 
-    margin-bottom:25px;
+    margin-bottom: 25px;
 
 }
 
@@ -437,118 +445,119 @@ input{
 BOTÕES
 ========================== */
 
-button{
+button {
 
-    cursor:pointer;
+    cursor: pointer;
 
-    border:none;
+    border: none;
 
-    border-radius:12px;
+    border-radius: 12px;
 
-    padding:16px 30px;
+    padding: 16px 30px;
 
-    font-size:18px;
+    font-size: 18px;
 
-    font-weight:600;
+    font-weight: 600;
 
 
-    transition:.35s;
-
-}
-
-#startButton{
-
-    background:var(--verde);
+    transition: .35s;
 
 }
 
-#introButton{
+#startButton {
 
-    background:var(--azul);
-
-}
-
-#choice1{
-
-    background:#ff8300;
+    background: var(--verde);
 
 }
 
-#choice2{
+#introButton {
 
-    background:var(--azul);
-
-}
-
-#restart{
-
-    background:var(--verde);
+    background: var(--azul);
 
 }
 
-#certificate{
+#choice1 {
 
-    background:#ff8300;
-
-    color:#222;
+    background: #ff8300;
 
 }
 
-#share{
+#choice2 {
 
-    background:var(--azul);
+    background: var(--azul);
 
 }
 
-button:hover{
+#restart {
 
-    transform:translateY(-4px);
+    background: var(--verde);
 
-    filter:brightness(1.1);
+}
+
+#certificate {
+
+    background: #ff8300;
+
+    color: #222;
+
+}
+
+#share {
+
+    background: var(--azul);
+
+}
+
+button:hover {
+
+    transform: translateY(-4px);
+
+    filter: brightness(1.1);
 
     box-shadow:
 
-    0 12px 30px rgba(0,0,0,.4);
+        0 12px 30px rgba(0, 0, 0, .4);
 
 }
+
 /* =======================================
    HEADER DO JOGO
 ======================================= */
 
-header{
-    display:flex;
-    justify-content:space-between;
-    flex-direction:column;
-    align-items:center;
-    margin-bottom:30px;
-    gap:20px;
+header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 20px;
 }
 
-header h2{
+header h2 {
 
-    font-size:32px;
-
-}
-
-header p{
-
-    color:var(--cinza);
-
-    margin-top:5px;
+    font-size: 32px;
 
 }
 
-.player{
+header p {
 
-    background:rgba(255,255,255,.08);
+    color: var(--cinza);
 
-    padding:15px 25px;
+    margin-top: 5px;
 
-    border-radius:12px;
+}
 
-    border:1px solid rgba(255,255,255,.1);
+.player {
 
-    font-weight:600;
+    background: rgba(255, 255, 255, .08);
+
+    padding: 15px 25px;
+
+    border-radius: 12px;
+
+    border: 1px solid rgba(255, 255, 255, .1);
+
+    font-weight: 600;
 
 }
 
@@ -556,83 +565,83 @@ header p{
    BARRAS
 ======================================= */
 
-.bars{
+.bars {
 
-    display:grid;
+    display: grid;
 
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 
-    gap:18px;
+    gap: 18px;
 
 
 
-    margin-bottom:35px;
-
-}
-
-.bars div{
-
-    background:rgba(255,255,255,.05);
-
-    border-radius:14px;
-
-    padding:15px;
-
-    border:1px solid rgba(255,255,255,.08);
+    margin-bottom: 35px;
 
 }
 
-.bars label{
+.bars div {
 
-    display:block;
+    background: rgba(255, 255, 255, .05);
 
-    margin-bottom:10px;
+    border-radius: 14px;
 
-    font-size:15px;
+    padding: 15px;
 
-    color:white;
+    border: 1px solid rgba(255, 255, 255, .08);
+
+}
+
+.bars label {
+
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-size: 15px;
+
+    color: white;
 
 }
 
 /* Barras modernas */
 
-progress{
+progress {
 
-    width:100%;
+    width: 100%;
 
-    height:18px;
+    height: 18px;
 
-    appearance:none;
+    appearance: none;
 
-    border:none;
+    border: none;
 
-    border-radius:30px;
+    border-radius: 30px;
 
-    overflow:hidden;
-
-}
-
-progress::-webkit-progress-bar{
-
-    background:#374151;
-
-    border-radius:30px;
+    overflow: hidden;
 
 }
 
-progress::-webkit-progress-value{
+progress::-webkit-progress-bar {
 
-    background:linear-gradient(90deg,#22c55e,#16a34a);
+    background: #374151;
 
-    border-radius:30px;
-
-    transition:.4s;
+    border-radius: 30px;
 
 }
 
-progress::-moz-progress-bar{
+progress::-webkit-progress-value {
 
-    background:#22c55e;
+    background: linear-gradient(90deg, #22c55e, #16a34a);
+
+    border-radius: 30px;
+
+    transition: .4s;
+
+}
+
+progress::-moz-progress-bar {
+
+    background: #22c55e;
 
 }
 
@@ -640,52 +649,53 @@ progress::-moz-progress-bar{
    CARD DA FASE
 ======================================= */
 
-.game-card{
+.game-card {
 
-    margin-top:25px;
+    margin-top: 25px;
     width: 100%;
 
 
 }
-.dois-um{
+
+.dois-um {
     gap: 60px;
     display: flex;
     flex-direction: column;
 }
 
-#phaseImage{
+#phaseImage {
 
-    width:650px;
+    width: 650px;
 
-    max-width:100%;
+    max-width: 100%;
 
-    border-radius:20px;
+    border-radius: 20px;
 
-    margin-bottom:25px;
+    margin-bottom: 25px;
 
-    box-shadow:0 15px 40px rgba(0,0,0,.45);
-
-}
-
-#question{
-
-    font-size:34px;
-
-    margin-bottom:20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .45);
 
 }
 
-#description{
+#question {
 
-    font-size:18px;
+    font-size: 34px;
 
-    line-height:1.8;
+    margin-bottom: 20px;
 
-    color:var(--cinza);
+}
 
-    max-width:750px;
+#description {
 
-    margin:auto;
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    color: var(--cinza);
+
+    max-width: 750px;
+
+    margin: auto;
 
 }
 
@@ -693,27 +703,27 @@ progress::-moz-progress-bar{
    BOTÕES DAS ESCOLHAS
 ======================================= */
 
-.choices{
+.choices {
 
-    display:flex;
+    display: flex;
 
-    gap:20px;
+    gap: 20px;
 
-    justify-content:center;
+    justify-content: center;
 
-    flex-wrap:wrap;
+    flex-wrap: wrap;
 
-    margin-top:40px;
+    margin-top: 40px;
 
 }
 
-.choices button{
+.choices button {
 
-    width:320px;
+    width: 320px;
 
-    min-height:75px;
+    min-height: 75px;
 
-    font-size:18px;
+    font-size: 18px;
 
 }
 
@@ -721,59 +731,59 @@ progress::-moz-progress-bar{
    TELA FINAL
 ======================================= */
 
-.final-card h1{
+.final-card h1 {
 
-    font-size:48px;
+    font-size: 48px;
 
-    margin-top:20px;
-
-}
-
-.final-card h2{
-
-    margin-top:15px;
-
-    font-size:30px;
+    margin-top: 20px;
 
 }
 
-.final-card p{
+.final-card h2 {
 
-    margin-top:20px;
+    margin-top: 15px;
 
-    font-size:19px;
-    color:white;
-    line-height:1.8;
+    font-size: 30px;
 
 }
 
-.trophy{
+.final-card p {
 
-    width:325px;
+    margin-top: 20px;
 
-}
-
-#stars{
-
-    font-size:45px;
-
-    color:gold;
-
-    margin:30px 0;
+    font-size: 19px;
+    color: white;
+    line-height: 1.8;
 
 }
 
-.buttons{
+.trophy {
 
-    display:flex;
+    width: 325px;
 
-    justify-content:center;
+}
 
-    flex-wrap:wrap;
+#stars {
 
-    gap:15px;
+    font-size: 45px;
 
-    margin-top:30px;
+    color: gold;
+
+    margin: 30px 0;
+
+}
+
+.buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    margin-top: 30px;
 
 }
 
@@ -781,822 +791,437 @@ progress::-moz-progress-bar{
    QR CODE
 ======================================= */
 
-.qr{
+.qr {
 
-    margin-top:45px;
+    margin-top: 45px;
 
 }
 
-#qrCode{
+#qrCode {
 
-    width:180px;
+    width: 180px;
 
-    margin-top:15px;
+    margin-top: 15px;
 
-    background:white;
+    background: white;
 
-    padding:12px;
+    padding: 12px;
 
-    border-radius:15px;
+    border-radius: 15px;
 
+}
+
+#phaseImage {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
 }
 
 /* =======================================
    RODAPÉ OPCIONAL
 ======================================= */
 
-footer{
+footer {
 
-    text-align:center;
+    text-align: center;
 
-    padding:30px;
+    padding: 30px;
 
-    color:#94a3b8;
+    color: #94a3b8;
 
-    font-size:14px;
+    font-size: 14px;
 
 }
+
 /* =======================================
    CARREIRA FINAL
 ======================================= */
 
-.career-icon{
+.career-icon {
 
-    font-size:90px;
+    font-size: 90px;
 
-    margin:20px 0;
+    margin: 20px 0;
 
-    animation:floating 3s infinite;
-
-}
-
-#careerTitle{
-
-    font-size:34px;
-
-    margin-top:15px;
+    animation: floating 3s infinite;
 
 }
 
-#careerDescription{
+#careerTitle {
 
-    max-width:700px;
-    color:white;
-    margin:auto;
+    font-size: 34px;
 
-    line-height:1.8;
+    margin-top: 15px;
+
+}
+
+#careerDescription {
+
+    max-width: 700px;
+    color: white;
+    margin: auto;
+
+    line-height: 1.8;
 
 
 }
 
-#stars{
+#stars {
 
-    font-size:45px;
+    font-size: 45px;
 
-    margin:25px 0;
+    margin: 25px 0;
 
-    color:gold;
+    color: gold;
 
 }
+
 /* =======================================
    ESTATÍSTICAS
 ======================================= */
 
-.result-card{
+.result-card {
 
-    margin-top:30px;
+    margin-top: 30px;
 
-    background:rgba(255,255,255,.06);
+    background: rgba(255, 255, 255, .06);
 
-    border-radius:18px;
+    border-radius: 18px;
 
-    padding:25px;
-
-}
-
-.stats-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-
-    gap:18px;
-
-    margin-top:20px;
+    padding: 25px;
 
 }
 
-.stats-grid div{
+.stats-grid {
 
-    background:rgba(255,255,255,.05);
+    display: grid;
 
-    padding:18px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
 
-    border-radius:12px;
+    gap: 18px;
 
-}
-
-.stats-grid span{
-
-    display:block;
-
-
-    margin-bottom:8px;
+    margin-top: 20px;
 
 }
 
-.stats-grid strong{
+.stats-grid div {
 
-    font-size:28px;
+    background: rgba(255, 255, 255, .05);
 
-    color:#22c55e;
+    padding: 18px;
 
-}
-
-#achievementList{
-
-    margin-top:20px;
-
-    list-style:none;
+    border-radius: 12px;
 
 }
 
-#achievementList li{
+.stats-grid span {
 
-    padding:10px 0;
+    display: block;
 
-    font-size:18px;
+
+    margin-bottom: 8px;
 
 }
+
+.stats-grid strong {
+
+    font-size: 28px;
+
+    color: #22c55e;
+
+}
+
+#achievementList {
+
+    margin-top: 20px;
+
+    list-style: none;
+
+}
+
+#achievementList li {
+
+    padding: 10px 0;
+
+    font-size: 18px;
+
+}
+
 /* ==========================
 BOTÕES DO CERTIFICADO
 ========================== */
 
-.certificate-buttons{
+.certificate-buttons {
 
-    display:flex;
+    display: flex;
 
-    justify-content:center;
+    justify-content: center;
 
-    gap:15px;
+    gap: 15px;
 
-    margin-top:25px;
-
-}
-
-#backResult{
-
-    background:#3b82f6;
+    margin-top: 25px;
 
 }
 
-#backMenu{
+#backResult {
 
-    background:#22c55e;
+    background: #3b82f6;
 
 }
+
+#backMenu {
+
+    background: #22c55e;
+
+}
+
 /*=========================================
                 CRÉDITOS
 =========================================*/
 
 
 
-.team{
+.team {
 
-    margin:35px 0;
-
-}
-
-.team h3{
-
-    color:#F7941D;
-
-    margin-bottom:15px;
+    margin: 35px 0;
 
 }
 
-.team ul{
+.team h3 {
 
-    list-style:none;
+    color: #F7941D;
 
-    padding:0;
-
-}
-
-.team li{
-
-    margin:12px 0;
-
-    font-size:20px;
+    margin-bottom: 15px;
 
 }
 
-.version{
+.team ul {
 
-    margin-top:35px;
+    list-style: none;
 
-    color:#CBD5E1;
-
-    font-style:italic;
-
-}
-#creditsButton{
-
-    background:#64748b;
-
-    color:white;
-
-    margin-top:10px;
+    padding: 0;
 
 }
 
-#closeCredits{
+.team li {
 
-    background:#3b82f6;
+    margin: 12px 0;
 
-    color:white;
+    font-size: 20px;
 
 }
+
+.version {
+
+    margin-top: 35px;
+
+    color: #CBD5E1;
+
+    font-style: italic;
+
+}
+
+#creditsButton {
+
+    background: #64748b;
+
+    color: white;
+
+    margin-top: 10px;
+
+}
+
+#closeCredits {
+
+    background: #3b82f6;
+
+    color: white;
+
+}
+
 /* =======================================
    RESPONSIVIDADE - CELULAR
 ======================================= */
 
-@media (max-width: 768px){
-    /* =======================================
-   PERGUNTAS NO CELULAR
-======================================= */
+@media (max-width: 768px) {
 
-@media (max-width: 768px){
-
-    #game{
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        width:100%;
+    body {
+        overflow: hidden;
     }
 
-    .dois-um{
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        width:100%;
-        gap:20px;
+    .screen {
+        width: 100%;
+        height: 100vh;
+        min-height: 100vh;
+
+        padding: 20px 15px;
+
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        justify-content: flex-start;
+        align-items: center;
     }
-
-    .game-card{
-        width:100%;
-        max-width:500px;
-        margin:0;
-    }
-
-    #phaseImage{
-        display:block;
-        width:100%;
-        max-width:100%;
-        height:auto;
-        margin:0 auto 20px;
-    }
-
-    #question{
-        width:100%;
-        text-align:center;
-        font-size:24px;
-        margin-bottom:15px;
-    }
-
-    #description{
-        width:100%;
-        text-align:center;
-        font-size:15px;
-        line-height:1.6;
-    }
-
-    .choices{
-        width:100%;
-        display:flex;
-        flex-direction:column;
-        align-items:stretch;
-        gap:12px;
-        margin-top:25px;
-    }
-
-    .choices button{
-        width:100%;
-        min-height:65px;
-        margin:0;
-    }
-
-    .bars{
-        width:100%;
-        max-width:500px;
-        display:flex;
-        flex-direction:column;
-        gap:10px;
-    }
-
-}
-
-    /* TELA */
-
-    .screen{
-        padding:25px 15px;
-        min-height:100vh;
-    }
-
-    .screen.active{
-        gap:15px;
-    }
-
-
-    /* ==========================
-       CARDS
-    ========================== */
-
-    .menu-card,
-    .story-card,
-    .game-card{
-        width:100%;
-        max-width:100%;
-        padding:25px 18px;
-        border-radius:20px;
-    }
-
 
     /* ==========================
        MENU
     ========================== */
 
-    .logo{
-        width:220px;
-        max-width:80%;
+    .menu-card,
+    .story-card {
+        width: 100%;
+        padding: 30px 20px;
     }
 
-    .menu-card h1{
-        font-size:28px;
-        line-height:1.3;
+    .menu-card h1 {
+        font-size: 28px;
     }
 
-    .menu-card p{
-        font-size:15px;
+    .logo {
+        width: 250px;
+        max-width: 80%;
     }
-
-    input{
-        width:100%;
-        font-size:16px;
-        padding:15px;
-    }
-
-    #startButton,
-    #creditsButton{
-        width:100%;
-        max-width:350px;
-    }
-
 
     /* ==========================
        HISTÓRIA
     ========================== */
 
-    .story-card h2{
-        font-size:27px;
+    .story-card h2 {
+        font-size: 28px;
     }
 
-    .story-card p{
-        font-size:15px;
-        line-height:1.7;
+    .story-card p {
+        font-size: 15px;
+        line-height: 1.7;
     }
-
-    #introButton{
-        width:100%;
-        max-width:350px;
-    }
-
 
     /* ==========================
        JOGO
     ========================== */
 
-    #game{
-        padding:15px;
-        align-items:flex-start;
+    #game {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+
+        width: 100%;
+
+        padding: 20px 15px;
+
+        gap: 15px;
     }
 
-    header{
+    #game header {
+        width: 100%;
 
-        width:100%;
+        margin-bottom: 10px;
 
-        margin-bottom:20px;
+        flex-direction: row;
 
-        gap:12px;
+        justify-content: space-between;
 
+        align-items: center;
+
+        gap: 10px;
     }
 
-    header h2{
-        font-size:24px;
-        text-align:center;
+    #game header h2 {
+        font-size: 24px;
     }
 
-    header p{
-        font-size:14px;
-        text-align:center;
+    #game header p {
+        font-size: 13px;
     }
 
-    .player{
-        padding:10px 18px;
-        font-size:14px;
-    }
+    #game .player {
+        padding: 10px 15px;
 
-
-    /* Barra de progresso */
-
-    .progress-container{
-        width:100%;
-    }
-
-
-    /* Card + barras */
-
-    .dois-um{
-
-        width:100%;
-
-        gap:20px;
-
-        display:flex;
-
-        flex-direction:column;
+        font-size: 14px;
 
     }
 
-    .game-card{
-
-        margin-top:10px;
-
-        width:100%;
-
+    .progress-container {
+        width: 100%;
     }
 
+    .dois-um {
+        width: 100%;
 
-    /* Imagem da fase */
+        display: flex;
 
-    #phaseImage{
+        flex-direction: column;
 
-        width:100%;
-
-        max-width:100%;
-
-        height:auto;
-
-        border-radius:15px;
-
-        margin-bottom:18px;
-
+        gap: 25px;
     }
 
+    .game-card {
+        width: 100%;
 
-    #question{
+        margin-top: 0;
 
-        font-size:25px;
-
-        line-height:1.3;
-
-        margin-bottom:12px;
-
+        padding: 20px 15px;
     }
 
-    #description{
-
-        font-size:15px;
-
-        line-height:1.7;
-
+    .final-card {
+        margin-bottom: auto;
     }
 
+    #phaseImage {
+        display: block;
 
-    /* ==========================
-       ESCOLHAS
-    ========================== */
+        width: 100%;
 
-    .choices{
+        height: auto;
 
-        flex-direction:column;
+        max-height: none;
 
-        gap:12px;
+        object-fit: contain;
 
-        margin-top:25px;
-
+        border-radius: 15px;
     }
 
-    .choices button{
-
-        width:100%;
-
-        min-height:65px;
-
-        font-size:16px;
-
-        padding:14px;
-
+    #question {
+        font-size: 25px;
     }
 
+    #description {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+    .choices {
+        flex-direction: column;
+
+        gap: 12px;
+
+        margin-top: 25px;
+    }
+
+    .choices button {
+        width: 100%;
+
+        min-height: 65px;
+
+        font-size: 16px;
+    }
 
     /* ==========================
        BARRAS
     ========================== */
 
-    .bars{
+    .bars {
+        width: 100%;
 
-        width:100%;
+        grid-template-columns: 1fr;
 
-        display:flex;
-
-        flex-direction:column;
-
-        gap:10px;
-
-        margin-bottom:20px;
-
+        gap: 12px;
     }
 
-    .bars div{
-
-        padding:12px;
-
-    }
-
-    .bars label{
-
-        font-size:14px;
-
-        margin-bottom:7px;
-
-    }
-
-    progress{
-
-        height:14px;
-
-    }
-
-
-    /* ==========================
-       TELA FINAL
-    ========================== */
-
-    #final{
-        padding:20px 12px;
-    }
-
-    .final-card{
-
-        width:100%;
-
-        padding:35px 18px;
-
-        border-width:5px;
-
-        border-radius:18px;
-
-    }
-
-    .final-card h1{
-
-        font-size:35px;
-
-    }
-
-    .final-card h2{
-
-        font-size:25px;
-
-    }
-
-    .final-card p{
-
-        font-size:15px;
-
-        line-height:1.7;
-
-    }
-
-
-    /* Troféu */
-
-    .trophy{
-
-        width:180px;
-
-        max-width:70%;
-
-    }
-
-
-    /* Estrelas */
-
-    #stars{
-
-        font-size:32px;
-
-        margin:18px 0;
-
-    }
-
-
-    /* Ícone da carreira */
-
-    .career-icon{
-
-        font-size:65px;
-
-        margin:15px 0;
-
-    }
-
-    #careerTitle{
-
-        font-size:27px;
-
-    }
-
-    #careerDescription{
-
-        font-size:15px;
-
-    }
-
-
-    /* ==========================
-       ESTATÍSTICAS
-    ========================== */
-
-    .result-card{
-
-        margin-top:20px;
-
-        padding:18px;
-
-        border-radius:15px;
-
-    }
-
-    .stats-grid{
-
-        grid-template-columns:repeat(2,1fr);
-
-        gap:10px;
-
-    }
-
-    .stats-grid div{
-
-        padding:14px 8px;
-
-    }
-
-    .stats-grid span{
-
-        font-size:13px;
-
-    }
-
-    .stats-grid strong{
-
-        font-size:22px;
-
-    }
-
-
-    /* ==========================
-       BOTÕES FINAIS
-    ========================== */
-
-    .buttons{
-
-        flex-direction:column;
-
-        gap:10px;
-
-    }
-
-    .buttons button{
-
-        width:100%;
-
-    }
-
-
-    /* ==========================
-       CERTIFICADO
-    ========================== */
-
-    #certificateScreen{
-
-        padding:15px;
-
-    }
-
-    #certificateScreen .final-card{
-
-        padding:35px 18px;
-
-    }
-
-    .final-card h1{
-
-        font-size:32px;
-
-    }
-
-    #certificateName{
-
-        font-size:28px;
-
-        word-break:break-word;
-
-    }
-
-    #certificateCareer{
-
-        font-size:25px;
-
-    }
-
-    #certificateDate{
-
-        margin-top:30px;
-
-    }
-
-    .certificate-buttons{
-
-        width:100%;
-
-        flex-direction:column;
-
-        gap:10px;
-
-    }
-
-    .certificate-buttons button{
-
-        width:100%;
-
-    }
-
-
-    /* ==========================
-       ASSINATURAS
-    ========================== */
-
-    .certificate-signatures{
-
-        flex-direction:column;
-
-        align-items:center;
-
-        gap:30px;
-
-        margin-top:40px;
-
-    }
-
-    .certificate-signatures div{
-
-        width:80%;
-
-    }
-
-
-    /* ==========================
-       CRÉDITOS
-    ========================== */
-
-    .credits-card{
-
-        width:100%;
-
-    }
-
-    .team{
-
-        margin:25px 0;
-
-    }
-
-    .team li{
-
-        font-size:15px;
-
-        line-height:1.5;
-
-        margin:10px 0;
-
-    }
-
-    #closeCredits{
-
-        width:100%;
-
+    .bars div {
+        width: 100%;
     }
 
 }
@@ -1606,88 +1231,174 @@ BOTÕES DO CERTIFICADO
    CELULARES PEQUENOS
 ======================================= */
 
-@media (max-width: 480px){
+@media (max-width: 480px) {
 
-    .screen{
+    .screen {
 
-        padding:15px 10px;
+        padding: 15px 10px;
 
     }
 
     .menu-card,
     .story-card,
-    .game-card{
+    .game-card {
 
-        padding:22px 15px;
-
-    }
-
-    .logo{
-
-        width:180px;
+        padding: 22px 15px;
 
     }
 
-    .menu-card h1{
+    .logo {
 
-        font-size:24px;
-
-    }
-
-    .menu-card p{
-
-        font-size:14px;
+        width: 180px;
 
     }
 
-    button{
+    .menu-card h1 {
 
-        font-size:16px;
-
-        padding:14px 20px;
+        font-size: 24px;
 
     }
 
-    #question{
+    .menu-card p {
 
-        font-size:22px;
-
-    }
-
-    #description{
-
-        font-size:14px;
+        font-size: 14px;
 
     }
 
-    .stats-grid{
+    button {
 
-        grid-template-columns:1fr;
+        font-size: 16px;
 
-    }
-
-    .trophy{
-
-        width:150px;
+        padding: 14px 20px;
 
     }
 
-    #stars{
+    #question {
 
-        font-size:27px;
-
-    }
-
-    .career-icon{
-
-        font-size:55px;
+        font-size: 22px;
 
     }
 
-    #careerTitle{
+    #description {
 
-        font-size:24px;
+        font-size: 14px;
 
+    }
+
+    .stats-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .trophy {
+
+        width: 150px;
+
+    }
+
+    #stars {
+
+        font-size: 27px;
+
+    }
+
+    .career-icon {
+
+        font-size: 55px;
+
+    }
+
+    #careerTitle {
+
+        font-size: 24px;
+
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    body {
+        overflow: hidden;
+    }
+
+    .screen {
+        height: 100vh;
+        min-height: 100vh;
+        padding: 25px 15px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .menu-card,
+    .story-card {
+        width: 100%;
+        padding: 30px 20px;
+    }
+
+    .menu-card h1 {
+        font-size: 28px;
+    }
+
+    .logo {
+        width: 250px;
+        max-width: 80%;
+    }
+
+    .story-card h2 {
+        font-size: 28px;
+    }
+
+    .story-card p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    #game {
+        align-items: flex-start;
+        padding-top: 20px;
+    }
+
+    header {
+        margin-bottom: 20px;
+    }
+
+    .dois-um {
+        width: 100%;
+        gap: 25px;
+    }
+
+    .game-card {
+        margin-top: 10px;
+        padding: 20px 15px;
+    }
+
+    #phaseImage {
+        width: 100%;
+    }
+
+    #question {
+        font-size: 25px;
+    }
+
+    #description {
+        font-size: 15px;
+    }
+
+    .choices {
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 25px;
+    }
+
+    .choices button {
+        width: 100%;
+        min-height: 65px;
+    }
+
+    .bars {
+        grid-template-columns: 1fr;
     }
 
 }

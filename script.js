@@ -582,37 +582,42 @@ const fases = [
 // CONTROLE DAS TELAS
 // ======================================================
 
-function mostrarTela(nome) {
+function mostrarTela(nome){
 
     document
-        .querySelectorAll(".screen")
-        .forEach(tela => {
+    .querySelectorAll(".screen")
+    .forEach(tela => {
 
-            tela.classList.remove("active");
+        tela.classList.remove("active");
 
-        });
+        // Volta cada tela para o topo
+        tela.scrollTop = 0;
 
-    if (nome === "menu")
+    });
+
+    if(nome === "menu")
         menu.classList.add("active");
 
-    if (nome === "intro")
+    if(nome === "intro")
         intro.classList.add("active");
 
-    if (nome === "game")
+    if(nome === "game")
         game.classList.add("active");
 
-    if (nome === "final")
+    if(nome === "final")
         finalScreen.classList.add("active");
 
-    if (nome === "certificate")
+    if(nome === "certificate")
         document
-            .getElementById("certificateScreen")
-            .classList.add("active");
-    if (nome === "credits")
+        .getElementById("certificateScreen")
+        .classList.add("active");
+
+    if(nome === "credits")
         creditsScreen.classList.add("active");
 
-
 }
+
+
 
 // ======================================================
 // INICIAR JOGO
