@@ -32,15 +32,11 @@ html {
 }
 
 body {
-
     font-family: "Poppins", sans-serif;
-
     background: var(--bg);
-
     color: white;
-
-    overflow: hidden;
-
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 /* ==========================
@@ -117,28 +113,23 @@ TELAS
 ========================== */
 
 .screen {
-
     display: none;
 
     width: 100%;
-
     min-height: 100vh;
-
-    height: 100vh;
+    height: auto;
 
     padding: 50px;
 
     justify-content: center;
-
     align-items: center;
 
     position: relative;
-
     z-index: 1;
 
-    overflow-y: auto;
-
+    overflow: visible;
 }
+
 
 .screen.active {
 
@@ -215,7 +206,9 @@ CARDS
 /* =======================================
    CERTIFICADO
 ======================================= */
-
+#final {
+    align-items: flex-start;
+}
 .final-card {
 
     width: 100%;
@@ -476,17 +469,8 @@ button {
 
 }
 
-#choice1 {
 
-    background: #ff8300;
 
-}
-
-#choice2 {
-
-    background: var(--azul);
-
-}
 
 #restart {
 
@@ -718,7 +702,7 @@ progress::-moz-progress-bar {
 }
 
 .choices button {
-
+    background: #ff8300;
     width: 320px;
 
     min-height: 75px;
@@ -1045,185 +1029,661 @@ BOTÕES DO CERTIFICADO
    RESPONSIVIDADE - CELULAR
 ======================================= */
 
-@media (max-width: 768px) {
+/* =======================================
+   RESPONSIVIDADE - CELULAR
+======================================= */
 
-    body {
-        overflow: hidden;
+@media (max-width: 768px){
+
+    /* TELA */
+
+    .screen{
+        padding:25px 15px;
+        
+        min-height:100vh;
     }
 
-    .screen {
-        width: 100%;
-        height: 100vh;
-        min-height: 100vh;
-
-        padding: 20px 15px;
-
-        overflow-y: auto;
-        overflow-x: hidden;
-
-        justify-content: flex-start;
-        align-items: center;
+    .screen.active{
+        gap:15px;
     }
+
+
+    /* ==========================
+       CARDS
+    ========================== */
+
+    .menu-card,
+    .story-card,
+    .game-card{
+        width:100%;
+        max-width:100%;
+        padding:25px 18px;
+        border-radius:20px;
+    }
+
 
     /* ==========================
        MENU
     ========================== */
 
-    .menu-card,
-    .story-card {
-        width: 100%;
-        padding: 30px 20px;
+    .logo{
+        width:220px;
+        max-width:80%;
     }
 
-    .menu-card h1 {
-        font-size: 28px;
+    .menu-card h1{
+        font-size:28px;
+        line-height:1.3;
     }
 
-    .logo {
-        width: 250px;
-        max-width: 80%;
+    .menu-card p{
+        font-size:15px;
     }
+
+    input{
+        width:100%;
+        font-size:16px;
+        padding:15px;
+    }
+
+    #startButton,
+    #creditsButton{
+        width:100%;
+        max-width:350px;
+    }
+
 
     /* ==========================
        HISTÓRIA
     ========================== */
 
-    .story-card h2 {
-        font-size: 28px;
+    .story-card h2{
+        font-size:27px;
     }
 
-    .story-card p {
-        font-size: 15px;
-        line-height: 1.7;
+    .story-card p{
+        font-size:15px;
+        line-height:1.7;
     }
+
+    #introButton{
+        width:100%;
+        max-width:350px;
+    }
+
 
     /* ==========================
        JOGO
     ========================== */
 
-    #game {
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-
-        width: 100%;
-
-        padding: 20px 15px;
-
-        gap: 15px;
+    #game{
+        padding:15px;
+        align-items:flex-start;
     }
 
-    #game header {
-        width: 100%;
+    header{
 
-        margin-bottom: 10px;
+        width:100%;
 
-        flex-direction: row;
+        margin-bottom:20px;
 
-        justify-content: space-between;
-
-        align-items: center;
-
-        gap: 10px;
-    }
-
-    #game header h2 {
-        font-size: 24px;
-    }
-
-    #game header p {
-        font-size: 13px;
-    }
-
-    #game .player {
-        padding: 10px 15px;
-
-        font-size: 14px;
+        gap:12px;
 
     }
 
-    .progress-container {
-        width: 100%;
+    header h2{
+        font-size:24px;
+        text-align:center;
     }
 
-    .dois-um {
-        width: 100%;
-
-        display: flex;
-
-        flex-direction: column;
-
-        gap: 25px;
+    header p{
+        font-size:14px;
+        text-align:center;
     }
 
-    .game-card {
-        width: 100%;
-
-        margin-top: 0;
-
-        padding: 20px 15px;
+    .player{
+        padding:10px 18px;
+        font-size:14px;
     }
 
-    .final-card {
-        margin-bottom: auto;
+
+    /* Barra de progresso */
+
+    .progress-container{
+        width:100%;
     }
 
-    #phaseImage {
-        display: block;
 
-        width: 100%;
+    /* Card + barras */
 
-        height: auto;
+    .dois-um{
 
-        max-height: none;
+        width:100%;
 
-        object-fit: contain;
+        gap:20px;
 
-        border-radius: 15px;
+        display:flex;
+
+        flex-direction:column;
+
     }
 
-    #question {
-        font-size: 25px;
+    .game-card{
+
+        margin-top:10px;
+
+        width:100%;
+
     }
 
-    #description {
-        font-size: 15px;
 
-        line-height: 1.7;
+    /* Imagem da fase */
+
+    #phaseImage{
+
+        width:100%;
+
+        max-width:100%;
+
+        height:auto;
+
+        border-radius:15px;
+
+        margin-bottom:18px;
+
     }
 
-    .choices {
-        flex-direction: column;
 
-        gap: 12px;
+    #question{
 
-        margin-top: 25px;
+        font-size:25px;
+
+        line-height:1.3;
+
+        margin-bottom:12px;
+
     }
 
-    .choices button {
-        width: 100%;
+    #description{
 
-        min-height: 65px;
+        font-size:15px;
 
-        font-size: 16px;
+        line-height:1.7;
+
     }
+
+
+    /* ==========================
+       ESCOLHAS
+    ========================== */
+
+    .choices{
+
+        flex-direction:column;
+
+        gap:12px;
+
+        margin-top:25px;
+
+    }
+
+    .choices button{
+
+        width:100%;
+
+        min-height:65px;
+
+        font-size:16px;
+
+        padding:14px;
+
+    }
+
 
     /* ==========================
        BARRAS
     ========================== */
 
-    .bars {
-        width: 100%;
+    .bars{
 
-        grid-template-columns: 1fr;
+        width:100%;
 
-        gap: 12px;
+        display:flex;
+
+        flex-direction:column;
+
+        gap:10px;
+
+        margin-bottom:20px;
+
     }
 
-    .bars div {
-        width: 100%;
+    .bars div{
+
+        padding:12px;
+
     }
 
+    .bars label{
+
+        font-size:14px;
+
+        margin-bottom:7px;
+
+    }
+
+    progress{
+
+        height:14px;
+
+    }
+
+
+    /* ==========================
+       TELA FINAL
+    ========================== */
+
+    #final{
+        padding:20px 12px;
+    }
+
+    .final-card{
+
+        width:100%;
+
+        padding:35px 18px;
+
+        border-width:5px;
+
+        border-radius:18px;
+
+    }
+
+    .final-card h1{
+
+        font-size:35px;
+
+    }
+
+    .final-card h2{
+
+        font-size:25px;
+
+    }
+
+    .final-card p{
+
+        font-size:15px;
+
+        line-height:1.7;
+
+    }
+
+
+    /* Troféu */
+
+    .trophy{
+
+        width:180px;
+
+        max-width:70%;
+
+    }
+
+
+    /* Estrelas */
+
+    #stars{
+
+        font-size:32px;
+
+        margin:18px 0;
+
+    }
+
+
+    /* Ícone da carreira */
+
+    .career-icon{
+
+        font-size:65px;
+
+        margin:15px 0;
+
+    }
+
+    #careerTitle{
+
+        font-size:27px;
+
+    }
+
+    #careerDescription{
+
+        font-size:15px;
+
+    }
+
+
+    /* ==========================
+       ESTATÍSTICAS
+    ========================== */
+
+    .result-card{
+
+        margin-top:20px;
+
+        padding:18px;
+
+        border-radius:15px;
+
+    }
+
+    .stats-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:10px;
+
+    }
+
+    .stats-grid div{
+
+        padding:14px 8px;
+
+    }
+
+    .stats-grid span{
+
+        font-size:13px;
+
+    }
+
+    .stats-grid strong{
+
+        font-size:22px;
+
+    }
+
+
+    /* ==========================
+       BOTÕES FINAIS
+    ========================== */
+
+    .buttons{
+
+        flex-direction:column;
+
+        gap:10px;
+
+    }
+
+    .buttons button{
+
+        width:100%;
+
+    }
+
+
+    /* ==========================
+       CERTIFICADO
+    ========================== */
+
+    #certificateScreen{
+
+        padding:15px;
+
+    }
+
+    #certificateScreen .final-card{
+
+        padding:35px 18px;
+
+    }
+
+    .final-card h1{
+
+        font-size:32px;
+
+    }
+
+    #certificateName{
+
+        font-size:28px;
+
+        word-break:break-word;
+
+    }
+
+    #certificateCareer{
+
+        font-size:25px;
+
+    }
+
+    #certificateDate{
+
+        margin-top:30px;
+
+    }
+
+    .certificate-buttons{
+
+        width:100%;
+
+        flex-direction:column;
+
+        gap:10px;
+
+    }
+
+    .certificate-buttons button{
+
+        width:100%;
+
+    }
+
+
+    /* ==========================
+       ASSINATURAS
+    ========================== */
+
+    .certificate-signatures{
+
+        flex-direction:column;
+
+        align-items:center;
+
+        gap:30px;
+
+        margin-top:40px;
+
+    }
+
+    .certificate-signatures div{
+
+        width:80%;
+
+    }
+
+
+    /* ==========================
+       CRÉDITOS
+    ========================== */
+
+    .credits-card{
+
+        width:100%;
+
+    }
+
+    .team{
+
+        margin:25px 0;
+
+    }
+
+    .team li{
+
+        font-size:15px;
+
+        line-height:1.5;
+
+        margin:10px 0;
+
+    }
+
+    #closeCredits{
+
+        width:100%;
+
+    }
+    #game{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        width:100%;
+    }
+
+    .dois-um{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        width:100%;
+        gap:20px;
+    }
+
+    .game-card{
+        width:100%;
+        max-width:500px;
+        margin:0;
+    }
+
+    #phaseImage{
+        display:block;
+        width:100%;
+        max-width:100%;
+        height:auto;
+        margin:0 auto 20px;
+    }
+
+    #question{
+        width:100%;
+        text-align:center;
+        font-size:24px;
+        margin-bottom:15px;
+    }
+
+    #description{
+        width:100%;
+        text-align:center;
+        font-size:15px;
+        line-height:1.6;
+    }
+
+    .choices{
+        width:100%;
+        display:flex;
+        flex-direction:column;
+        align-items:stretch;
+        gap:12px;
+        margin-top:25px;
+    }
+
+    .choices button{
+        width:100%;
+        min-height:65px;
+        margin:0;
+    }
+
+    .bars{
+        width:100%;
+        max-width:500px;
+        display:flex;
+        flex-direction:column;
+        gap:10px;
+    }
+
+/* =======================================
+   CORREÇÃO DAS TELAS NO RESPONSIVO
+======================================= */
+
+.screen {
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+
+    box-sizing: border-box;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* Telas que não estão ativas ficam fora da página */
+.screen:not(.active) {
+    display: none !important;
+}
+
+/* Somente a tela ativa aparece */
+.screen.active {
+    display: flex !important;
+}
+
+/* ==========================
+   MENU
+========================== */
+
+#menu.active {
+    min-height: 100vh;
+    height: auto;
+
+    overflow-y: auto;
+
+    justify-content: center;
+    align-items: center;
+}
+
+/* ==========================
+   INTRO
+========================== */
+
+#intro.active {
+    min-height: 100vh;
+    height: 100vh;
+
+    overflow-y: auto;
+
+    justify-content: center;
+    align-items: center;
+}
+
+/* ==========================
+   JOGO
+========================== */
+
+#game.active {
+    min-height: 100vh;
+    height: 100vh;
+
+    overflow-y: auto;
+
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* ==========================
+   FINAL
+========================== */
+
+#final.active {
+    min-height: 100vh;
+    height: auto;
+
+    overflow-y: auto;
+
+    justify-content: flex-start;
+    align-items: center;
+}
 }
 
 
@@ -1231,174 +1691,135 @@ BOTÕES DO CERTIFICADO
    CELULARES PEQUENOS
 ======================================= */
 
-@media (max-width: 480px) {
-
+@media (max-width: 480px){
     .screen {
+        width: 100%;
+        height: 100vh;
+        min-height: 100vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
 
-        padding: 15px 10px;
+    .screen:not(.active) {
+        display: none !important;
+    }
+
+    .screen.active {
+        display: flex !important;
+    }
+    .screen{
+
+        padding:15px 10px;
 
     }
 
     .menu-card,
     .story-card,
-    .game-card {
+    .game-card{
 
-        padding: 22px 15px;
-
-    }
-
-    .logo {
-
-        width: 180px;
+        padding:22px 15px;
 
     }
 
-    .menu-card h1 {
+    .logo{
 
-        font-size: 24px;
-
-    }
-
-    .menu-card p {
-
-        font-size: 14px;
+        width:180px;
 
     }
 
-    button {
+    .menu-card h1{
 
-        font-size: 16px;
-
-        padding: 14px 20px;
+        font-size:24px;
 
     }
 
-    #question {
+    .menu-card p{
 
-        font-size: 22px;
-
-    }
-
-    #description {
-
-        font-size: 14px;
+        font-size:14px;
 
     }
 
-    .stats-grid {
+    button{
 
-        grid-template-columns: 1fr;
+        font-size:16px;
 
-    }
-
-    .trophy {
-
-        width: 150px;
+        padding:14px 20px;
 
     }
 
-    #stars {
+    #question{
 
-        font-size: 27px;
-
-    }
-
-    .career-icon {
-
-        font-size: 55px;
+        font-size:22px;
 
     }
 
-    #careerTitle {
+    #description{
 
-        font-size: 24px;
+        font-size:14px;
+
+    }
+
+    .stats-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .trophy{
+
+        width:150px;
+
+    }
+
+    #stars{
+
+        font-size:27px;
+
+    }
+
+    .career-icon{
+
+        font-size:55px;
+
+    }
+
+    #careerTitle{
+
+        font-size:24px;
 
     }
 
 }
 
-@media (max-width: 768px) {
+/* ============================= */
+/* QR CODE */
+/* ============================= */
 
-    body {
-        overflow: hidden;
-    }
+.qrcode-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
 
-    .screen {
-        height: 100vh;
-        min-height: 100vh;
-        padding: 25px 15px;
-        overflow-y: auto;
-        overflow-x: hidden;
-    }
+.qrcode {
+    width: 230px;
+    height: 230px;
+    padding: 8px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
 
-    .menu-card,
-    .story-card {
-        width: 100%;
-        padding: 30px 20px;
-    }
+.qrcode-container p {
+    margin-top: 8px;
+    font-size: 13px;
+    text-align: center;
+    opacity: 0.85;
+}
 
-    .menu-card h1 {
-        font-size: 28px;
-    }
-
-    .logo {
-        width: 250px;
-        max-width: 80%;
-    }
-
-    .story-card h2 {
-        font-size: 28px;
-    }
-
-    .story-card p {
-        font-size: 15px;
-        line-height: 1.7;
-    }
-
-    #game {
-        align-items: flex-start;
-        padding-top: 20px;
-    }
-
-    header {
-        margin-bottom: 20px;
-    }
-
-    .dois-um {
-        width: 100%;
-        gap: 25px;
-    }
-
-    .game-card {
-        margin-top: 10px;
-        padding: 20px 15px;
-    }
-
-    #phaseImage {
-        width: 100%;
-    }
-
-    #question {
-        font-size: 25px;
-    }
-
-    #description {
-        font-size: 15px;
-    }
-
-    .choices {
-        flex-direction: column;
-        gap: 12px;
-        margin-top: 25px;
-    }
-
-    .choices button {
-        width: 100%;
-        min-height: 65px;
-    }
-
-    .bars {
-        grid-template-columns: 1fr;
-    }
-
+.final-qrcode {
+    margin-top: 25px;
+    margin-bottom: 20px;
 }
